@@ -1,6 +1,6 @@
 
 const sgMail = require('@sendgrid/mail');
-const apiKey = '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';
+const apiKey = '';
 const sendGrid = {};
 
 sendGrid.sendMailBienvenida = async(user, empresa, link ) => {
