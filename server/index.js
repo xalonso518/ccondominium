@@ -18,6 +18,7 @@ app.use(cors({origin: 'http://localhost:4200'}));
 app.use('/api/auth/', require('./routes/auth.routes'));
 app.use('/api/usuario/', require('./routes/usuario.routes'));
 app.use('/api/config/', require('./routes/config.routes'));
+app.use('/api/tipoCuota/', require('./routes/tipoCuota.routes'));
 app.use('/public', express.static('public'))
 
 
