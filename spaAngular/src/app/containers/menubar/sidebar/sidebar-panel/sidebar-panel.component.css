@@ -1,0 +1,12 @@
+.sidebar-noContent ul{
+    list-style:none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar-noContent li{
+    background: #f3f3f3;
+    margin: 10px 15px 5px 15px;
+    padding: 0px;
+    color: #f3f3f3;
+}

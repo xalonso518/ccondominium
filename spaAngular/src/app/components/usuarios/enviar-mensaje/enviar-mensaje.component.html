@@ -1,0 +1,61 @@
+<div class="modal-md">
+    <div mat-dialog-title class="mb-head">
+        <div class="close-section">
+            <a (click)="onNoClick()"><i class="material-icons">close</i></a>
+        </div>
+        <div class="title-section">
+                <h5>Enviar mensaje</h5>
+        </div>
+        <div class="options-section" *ngIf="enviarMensajeForm.valid">
+            <button mat-button color="primary" class="main-botton" (click)="guardar(enviarMensajeForm)">
+                <i class="material-icons">done</i> Guardar
+            </button>
+        </div>
+    </div>
+    <mat-dialog-content>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="form-container container">
+                        <form novalidate #enviarMensajeForm="ngForm">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <p class="subtitle">
+                                        Para: <b>{{usuario}}</b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 form-col">
+                                    <div class="form-group">
+                                        <!-- <mat-form-field class="input-disabled" appearance="outline" style="width: 100%">
+                                            <mat-label>Usuario(correo)</mat-label>
+                                            <input type="text" maxlength="100" matInput placeholder="Usuario(correo)" [(ngModel)]="usuario.user" required #nombre="ngModel" id="user" name="user" title="Nombre">
+                                            <span matSuffix class="matSuffixEmpty"></span>
+                                        </mat-form-field> -->
+                                        
+                                        <mat-form-field title="Mensaje" class="input-textArea" appearance="outline" style="width: 100%">
+                                            <textarea matInput #mensaje placeholder="Mensaje" maxlength="250" required
+                                                    [(ngModel)]="sMensaje" name="mensaje"></textarea>
+                                            <span matSuffix class="matSuffixEmpty"></span>
+                                            <mat-hint align="end">{{mensaje.value?.length || 0}}/250</mat-hint>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">                                            
+                                <div class="form-group" style="margin: auto;margin-right: 0px;">
+                                    <div class="col-sm-12 col-md-12 form-col">
+                                        <mat-slide-toggle [(ngModel)]="IsCorreo" [ngModelOptions]="{standalone: true}">Enviar correo</mat-slide-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+    </mat-dialog-actions>
+</div>

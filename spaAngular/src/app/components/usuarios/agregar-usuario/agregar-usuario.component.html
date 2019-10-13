@@ -1,0 +1,103 @@
+<div class="modal-md">
+        <div mat-dialog-title class="mb-head">
+            <div class="close-section">
+                <a (click)="onNoClick()"><i class="material-icons">close</i></a>
+            </div>
+            <div class="title-section">
+                    <h5 *ngIf="isAgregar">Agregar usuario</h5>
+                    <h5 *ngIf="!isAgregar">Editar usuario</h5>
+            </div>
+            <div class="options-section" *ngIf="usuarioForm.valid">
+                <button mat-button color="primary" class="main-botton" (click)="guardar(usuarioForm)"  *ngIf="isAgregar">
+                    <i class="material-icons">done</i> Guardar
+                </button>
+                <button mat-button color="primary" class="main-botton" (click)="editar(usuarioForm)"  *ngIf="!isAgregar">
+                    <i class="material-icons">done</i> Editar
+                </button>
+            </div>
+        </div>
+        <mat-dialog-content>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-2">
+                        <div class="img-container">
+                            <img *ngIf="usuario.imagen == '' || usuario.imagen == null" src="../../../../../assets/media/user.svg"/>
+                            <div *ngIf="usuario.imagen !== '' && usuario.imagen != undefined" [style.background-image]="'url('+setUrlImagen(usuario)+')'" class="img-profile"></div>     
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-10">
+                        <div class="form-container container">
+                            <form novalidate #usuarioForm="ngForm">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="subtitle">
+                                            Datos personales
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 form-col" *ngIf="isAgregar">
+                                        <div class="form-group">
+                                            <mat-form-field class="input-disabled" appearance="outline" style="width: 100%">
+                                                <mat-label>Usuario(correo)</mat-label>
+                                                <input type="text" maxlength="100" matInput placeholder="Usuario(correo)" [(ngModel)]="usuario.user" required #nombre="ngModel" id="user" name="user" title="Nombre">
+                                                <span matSuffix class="matSuffixEmpty"></span>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>                                   
+                                    <div class="col-sm-12 col-md-6 form-col">
+                                        <mat-form-field>
+                                        <mat-label>Tipo</mat-label>
+                                        <mat-select [(ngModel)]="usuario.tipo" name="tipo" style="width: 100%">
+                                            <mat-option *ngFor="let tipo of tiposUsuarios" [value]="tipo">{{tipo}}</mat-option>
+                                        </mat-select>
+                                        </mat-form-field>
+                                    </div> 
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 form-col">
+                                        <div class="form-group">
+                                            <mat-form-field class="input-disabled" appearance="outline" style="width: 100%">
+                                                <mat-label>Nombre</mat-label>
+                                                <input type="text" maxlength="50" matInput placeholder="Nombre" [(ngModel)]="usuario.nombre" required #nombre="ngModel" id="nombre" name="nombre" title="Nombre">
+                                                <span matSuffix class="matSuffixEmpty"></span>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 form-col">
+                                        <div class="form-group">
+                                            <mat-form-field class="input-disabled" appearance="outline" style="width: 100%">
+                                                <mat-label>Casa</mat-label>
+                                                <input type="text" maxlength="50" matInput [(ngModel)]="usuario.casa" required #casa="ngModel" id="casa" name="casa" title="Casa">
+                                                <span matSuffix class="matSuffixEmpty"></span>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">                                
+                                    <div class="col-sm-12 col-md-6 form-col">
+                                        <div class="form-group">
+                                            <mat-form-field appearance="outline" style="width: 100%" style="width: 100%">
+                                                <mat-label>Teléfono</mat-label>
+                                                <input matInput type="text" maxlength="50" [(ngModel)]="usuario.telefono" #telefono="ngModel" id="telefono" name="telefono" title="Teléfono">
+                                                <span matSuffix class="matSuffixEmpty"></span>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 form-col">
+                                        <mat-form-field appearance="outline">
+                                            <input matInput [matDatepicker]="picker" placeholder="Selecciona una fecha" name="fecha" [value]="fecha.value" [(ngModel)]="usuario.fechaIngreso">
+                                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+        </mat-dialog-actions>
+    </div>

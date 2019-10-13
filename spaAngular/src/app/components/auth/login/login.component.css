@@ -1,0 +1,166 @@
+.login-background {
+    padding: 0px;
+    height: 100%;
+    min-height: 620px;
+    /* background-image: url(../../../../../wwwroot/assets/img/fondoLogin.jpg); */
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.login-header {
+    text-align: center;
+    padding: 5px;
+}
+
+.login-logo img {
+    width: 250px;
+}
+
+.login-main-box {
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.login-box {
+    max-width: 410px;
+    margin-top: 70px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 3px;
+    padding-top: 25px;
+    box-shadow: 0px 1px 3px -1px #222;
+    padding-bottom: 25px;
+}
+
+.login-box i{
+    color: #bec5cb;
+    top: 0px;
+}
+
+.fa-eye{
+    cursor:pointer;
+}
+
+.login-box-footer {
+    text-align: left;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.login-box-footer a {
+    color: #6f6f6f;
+    text-decoration: none;
+    font-weight: normal;   
+}
+
+.login-box-footer .link-Prueba a {
+    color: #4eb551;
+    text-decoration: inherit;
+    text-decoration: none; 
+    font-weight: 500;
+}
+
+.login-footer {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100% !important;
+    max-width: none;
+    bottom: 0px;
+    color: #343944;
+    font-size: 0.8rem;
+}
+
+.login-olvide {
+    margin-bottom: 10px;
+ }
+
+.login-olvide a {
+   color: #007bff;
+}
+
+.link-Prueba{
+    text-decoration: none;
+}
+
+.login-button {
+    border-radius: 5px;
+    font-size: 0.9rem;
+    padding: 5px 15px 5px 15px;
+    background: #4eb551;
+    font-weight: normal;
+    width: 100%;
+    font-weight: 500;
+}
+
+.login-box h2 {
+    color: #343944;
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.login-derechos span {
+    color: #343944;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 767px) {
+    .login-box {
+        margin-top: 0px;
+        width: 100%;
+        /*max-width: 350px;*/
+    }
+
+    .login-main-box {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .login-box h2 {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .login-header {
+        padding: 15px;
+    }
+
+    .login-footer {
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .login-olvide {
+        position: relative;
+    }
+    
+    .login-box-footer .link-Prueba a {
+        display:block;
+    }
+}
+
+
+@media (max-width: 779px) {
+    .login-box{
+        margin-top: 0px;
+    }
+}
+
+@media (max-height: 750px) {
+    .login-footer {
+        position: relative;
+    }
+}
+
+form i {
+    color: #bec5cb;
+}
+
+.version-app {
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+    color: #818181;
+    font-size: 0.8rem;
+}

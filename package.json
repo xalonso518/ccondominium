@@ -1,0 +1,36 @@
+{
+  "name": "ccondominium",
+  "version": "1.0.0",
+  "description": "Control de condominios",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xalonso518/ccondominium.git"
+  },
+  "keywords": [],
+  "author": "xAlonso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xalonso518/ccondominium/issues"
+  },
+  "homepage": "https://github.com/xalonso518/ccondominium#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "formidable": "^1.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.3",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "path": "^0.12.7",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}

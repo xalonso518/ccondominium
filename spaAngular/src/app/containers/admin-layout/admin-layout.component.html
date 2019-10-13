@@ -1,0 +1,16 @@
+<div class="main-app">
+    <mat-toolbar class="main-header"  id="main-header">
+            <i class="material-icons sidenav-toggle" (click)="changeOpen()">dehaze</i>
+        <app-navbar-admin class="app-navbar-inicio"></app-navbar-admin>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="main-sidenav" id="main-container">
+        <mat-sidenav #sidenav mode="side" [(opened)]="identityUserService.openSidebar" class="main-sidenav-menu" id="main-sidebar">
+            <app-sidebar-admin class="sidebar-content"></app-sidebar-admin>
+        </mat-sidenav>
+
+        <mat-sidenav-content class="main-sidenav-container" id="main-content">
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

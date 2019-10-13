@@ -1,0 +1,14 @@
+@media all and (max-width: 720px) {
+    .img-container {
+        text-align: center;
+    }
+
+    .img-container img {
+        width: 125px;
+    }
+}
+
+.img-profile{
+    height: 90px;
+    border-radius: 0px;
+}

@@ -1,0 +1,22 @@
+.noContent {
+    background: #f3f3f3;
+    color: #f3f3f3;
+}
+
+.dropdown-menu-agregar {
+    font-size: 0.8rem;
+    color: #343944;
+    padding: 0px;
+}
+
+.dropdown-menu-agregar .dropdown-item{
+    padding: 8px;
+    padding-right: 20px;
+    line-height: 20px;
+    cursor:pointer;
+}
+
+.dropdown-menu-agregar .dropdown-item i{
+    min-width: 30px;
+    text-align: center;
+}
