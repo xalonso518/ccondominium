@@ -28,6 +28,7 @@ import { ErrorValidationService } from './utils/service/error-validation.service
 import { PanelAdminComponent } from './components/panel-admin/panel-admin.component';
 import { PanelUserComponent } from './components/panel-user/panel-user.component';
 import { PerfilUsuarioComponent } from './components/perfil/perfil-usuario.component';
+import { EnviarMensajeComponent } from './components/usuarios/enviar-mensaje/enviar-mensaje.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { PerfilUsuarioComponent } from './components/perfil/perfil-usuario.compo
     SidebarPanelComponent,
     PanelAdminComponent,
     PanelUserComponent,
-    PerfilUsuarioComponent,
+    PerfilUsuarioComponent
   ],
   imports: [
     BrowserModule,

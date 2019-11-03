@@ -7,6 +7,11 @@ import { AppMaterialModule } from './app-material.module';
 import * as FileSaver from 'file-saver';
 import { LoadingComponent } from './components/loading/loading.component';
 import { PerfilUsuarioComponent } from './components/perfil/perfil-usuario.component';
+import { EnviarMensajeComponent } from './components/usuarios/enviar-mensaje/enviar-mensaje.component';
+import { FileInputComponent } from './components/file/file-input/file-input.component';
+import { MultipleFileInputComponent } from './components/file/multiple-file-input/multiple-file-input.component';
+import { VisualizarPdfComponent } from './components/file/visualizar-pdf/visualizar-pdf.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Modulo que importa y exporta los componentes y modulos usados entre los modulos y que pueden ser llamados por ellos.
 @NgModule({
@@ -16,10 +21,14 @@ import { PerfilUsuarioComponent } from './components/perfil/perfil-usuario.compo
         ReactiveFormsModule,
         HttpClientModule,
         ChartsModule,
-        AppMaterialModule
+        AppMaterialModule,
     ],
     declarations: [
-        LoadingComponent
+        LoadingComponent,
+        EnviarMensajeComponent,
+        FileInputComponent,
+        MultipleFileInputComponent,
+        VisualizarPdfComponent,
     ],
     exports: [
         // Modulos generales
@@ -31,7 +40,11 @@ import { PerfilUsuarioComponent } from './components/perfil/perfil-usuario.compo
         AppMaterialModule,
 
         // //Componentes modal generales
-        LoadingComponent
+        LoadingComponent,
+        EnviarMensajeComponent,
+        FileInputComponent,
+        MultipleFileInputComponent,
+        VisualizarPdfComponent,
     ],
     entryComponents: [
     ]

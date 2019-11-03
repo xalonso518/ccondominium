@@ -1,6 +1,16 @@
 const TipoCuota = require('../models/tipoCuota');
-const Config = require('../models/config');
 const tipoCuotaCtrl = {};
+
+tipoCuotaCtrl.getTiposCuotaTodos = async(req, res) => {
+	try{
+        fTipos = await TipoCuota.find({ },{ __v: 0 });
+        if (!fTipos) return res.status(404).send('Tipos cuota no encontrados.');
+        res.status(200).send({ success: true, payload: fTipos });
+    }
+    catch(e){
+        res.status(404).send("Problemas de conexion");
+    }
+}
 
 tipoCuotaCtrl.getTiposCuota = async(req, res) => {
 	try{
@@ -32,7 +42,7 @@ tipoCuotaCtrl.createTipoCuota = async (req, res) => {
         const tipoCuota = new TipoCuota();
         tipoCuota.nombre = req.body.nombre;
         tipoCuota.importe = req.body.importe;
-        TipoCuota.estado = '1';
+        tipoCuota.estado = '1';
     
         var rTipoCuota = await tipoCuota.save();    
         if (!rTipoCuota) return res.status(404).send('Tipo cuota No creado.');

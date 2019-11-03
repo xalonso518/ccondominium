@@ -1,0 +1,6 @@
+﻿<div class="form-group file-drop-zone no-background" (drop)="drop($event, name)" (dragover)="dragover($event)" (dragleave)="dragleave($event)">
+    <div class="file-zone">
+        <input class="ng-hide" id="{{name}}" type="file" (change)="onChange($event)" multiple/>
+        <label for="{{name}}" class="md-button md-raised md-primary"><i class="fas fa-cloud-upload-alt"></i> {{placeholder}}</label>
+    </div>
+</div>

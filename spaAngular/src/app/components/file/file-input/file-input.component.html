@@ -1,0 +1,12 @@
+﻿<div class="form-group file-drop-zone" (drop)="drop($event, name, ext)" (dragover)="dragover($event)" (dragleave)="dragleave($event)">
+    <div class="file-zone">
+        <input class="ng-hide" id="{{name}}" type="file" (change)="onChange($event, name, ext)" />
+        <label [class.hide]="imagen != undefined && imagen != ''" for="{{name}}"  class="md-button md-raised md-primary" [style.opacity]="fileInput.file && !reset? '0': '1'"><i class="fas fa-cloud-upload-alt"></i> {{placeholder}}</label>
+        <div *ngIf="fileInput" class="img-result">
+            <img *ngIf="showImage" [src]="_DomSanitizationService.bypassSecurityTrustUrl(fileInput.src)">
+            <i *ngIf="fileInput.file && !showImage && !reset" class="fas fa-file"></i>
+            <p [style.opacity]="reset ? '0': '1'">{{fileInput.file.name}}</p>
+        </div>
+    </div>
+    <div class="img-back" *ngIf="imagen != undefined && imagen != '' && fileInput.file == ''" [style.background-image]="'url(' + urlPublic + imagen +')'"></div>
+</div>

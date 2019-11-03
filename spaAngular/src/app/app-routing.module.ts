@@ -24,7 +24,12 @@ const routes: Routes = [
       children: [
           { path: '', component: PanelAdminComponent },
           { path: 'panel', component: PanelAdminComponent },
-          { path: 'usuarios', loadChildren: './components/usuarios/usuarios.module#UsuariosModule' }
+          { path: 'usuarios', loadChildren: './components/usuarios/usuarios.module#UsuariosModule' },
+          { path: 'cuotas', loadChildren: './components/cuotas/cuotas.module#CuotasModule' },
+          { path: 'gastos', loadChildren: './components/gastos/gastos.module#GastosModule' },
+          { path: 'cumplimiento', loadChildren: './components/cumplimiento/cumplimiento.module#CumplimientoModule' },
+          { path: 'reporte', loadChildren: './components/reporte/reporte.module#ReporteModule' },
+          { path: 'condominio', loadChildren: './components/condominio/condominio.module#CondominioModule' },
       ]
   },
   {

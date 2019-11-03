@@ -4,6 +4,7 @@ var VerifyToken  = require('../includes/verifyToken');
 var VerifyTokenAdmin  = require('../includes/verifyTokenAdmin');
 const tipoCuotaCtrl = require('../controllers/tipoCuota.controller');
 
+router.get('/list/todos', VerifyToken, tipoCuotaCtrl.getTiposCuotaTodos);
 router.get('/list', VerifyToken, tipoCuotaCtrl.getTiposCuota);
 router.get('/:id', VerifyToken, tipoCuotaCtrl.getTipoCuota);
 router.post('/', VerifyTokenAdmin,tipoCuotaCtrl.createTipoCuota);

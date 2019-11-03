@@ -1,0 +1,18 @@
+﻿<div class="modal-lg">
+    <div mat-dialog-title class="mb-head">
+        <div class="close-section">
+            <a (click)="onNoClick()"><i class="fas fa-times"></i></a>
+        </div>
+        <div class="title-section">
+            <h5>Visualización</h5>
+        </div>
+    </div>
+    <mat-dialog-content class="pdf-visualizacion">
+        <div class="container" *ngIf="dataLocalUrl != 'NA'">
+            <iframe [attr.src]="_DomSanitizationService.bypassSecurityTrustResourceUrl(dataLocalUrl)" type="application/pdf"></iframe>
+        </div>
+        <div class="container" *ngIf="url != 'NA'">
+            <iframe [attr.src]="url" type="application/pdf"></iframe>
+        </div>
+    </mat-dialog-content>
+</div>

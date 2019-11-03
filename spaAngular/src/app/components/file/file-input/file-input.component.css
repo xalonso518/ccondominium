@@ -1,0 +1,13 @@
+﻿.img-back {
+    z-index: 0;
+    top: -90px;
+    height: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+}
+
+.hide{
+    font-size: 0rem;
+}

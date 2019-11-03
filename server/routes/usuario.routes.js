@@ -6,6 +6,7 @@ var uploadFile = require('../includes/handleFile');
 const usuarioCtrl = require('../controllers/usuario.controller');
 
 router.get('/list', VerifyTokenAdmin, usuarioCtrl.getUsuarios);
+router.get('/casa', VerifyTokenAdmin, usuarioCtrl.getUsuariosCasa);
 router.get('/:id', VerifyToken, usuarioCtrl.getUsuario);
 router.post('/', VerifyTokenAdmin,usuarioCtrl.createUsuario);
 router.put('/:id', VerifyTokenAdmin,usuarioCtrl.editUsuario);

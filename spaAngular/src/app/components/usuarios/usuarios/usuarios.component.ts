@@ -1,8 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {MatCardModule} from '@angular/material/card';
 import { UsuarioService } from '../usuario.service';
-import { NgForm } from '@angular/forms';
-import { Usuarios } from 'src/app/models/Usuario/usuarios';
 import { ToastrService } from 'ngx-toastr';
 import { IdentityUserService } from 'src/app/utils/IdentityUser/identity-user.service';
 import { LoadingService } from '../../loading/loading.service';
@@ -10,7 +7,6 @@ import { UsuarioView } from 'src/app/models/usuario/usuarioView';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatSort} from '@angular/material/sort';
 import { ConfigService } from 'src/app/utils/service/config.service';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { AgregarUsuarioComponent } from '../agregar-usuario/agregar-usuario.component';
 import { MatDialog } from '@angular/material';
 import { UsuarioCambioEstado } from 'src/app/models/usuario/usuarioCambioEstado';
@@ -105,7 +101,7 @@ export class UsuariosComponent implements OnInit {
   openEnviarMensaje(usuario: UsuarioView): void {
     const dialogRef = this.dialog.open(EnviarMensajeComponent, {
       // tslint:disable-next-line: object-literal-shorthand
-      disableClose: false, autoFocus: false, width: '750px',  data: {usuario: usuario}
+      disableClose: false, autoFocus: false, width: '750px',  data: {usuario: usuario.user}
     });
   }
 

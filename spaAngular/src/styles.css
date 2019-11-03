@@ -83,7 +83,7 @@
     font-style: italic;
 }
 
-.pointer{cursor: pointer}
+.pointer{cursor: pointer !important}
 /*   LOADING   */
 .app-loading {
     margin: 0 auto;
@@ -1145,6 +1145,11 @@ body {
     height: 46px;
 }
 
+.header-main-outlet .second-opcions-header button{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
 .header-main-outlet .second-opcions-header .form-group{
     display: inline-block;
     margin-bottom: 0px;
@@ -1295,6 +1300,7 @@ body {
 /* Table */
 .box-main-outlet table{
     font-family: 'montserrat' !important;
+    width: 100%;
 }
 
 .box-main-outlet table thead{    
@@ -1596,4 +1602,313 @@ button.toast-close-button {
 
 .color-inactivo{
     color: #ff9f4d;
+}
+
+.search-instructions {
+    color: #6c757d;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    min-width: 235px;
+}
+
+.search-instructions-empresas {
+    margin-top: 30px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+background: #ffffff !important;
+}
+
+/** DRAG AND DROP FILE**/
+.file-drop-zone {
+    width: 100%;
+    /* padding: 20px; */
+    border-style: dashed;
+    border-color: #bec5cb;
+    border-width: 2px;
+    background: #ffffff;
+    height: 46px;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: all ease-in 0.15s;
+}
+
+.file-drop-zone-drop {
+    color: #343944 !important;
+    background: #f3f3f3;
+}
+
+.file-zone {
+    height: 100%;
+    width: 100%;
+}
+
+.file-zone input{
+ position: relative;
+    top: -35px;
+
+}
+
+.file-zone label{
+color: #bec5cb;
+    font-size: 0.8rem;
+    position: relative;
+    top: -30px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0px;
+    padding-top: 12px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+@media (max-width: 680px){
+    .file-zone label{
+        font-size: 0.7rem;
+    }
+}
+
+.file-zone i{
+    position: relative;
+    margin-right: 5px;
+}
+
+.file-zone .img-result {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    top: -70px;
+    text-align: center;
+}
+
+.file-zone .img-result img{
+position: relative;
+    display: inline-block;
+    height: 32px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.file-zone .img-result p{
+    display: inline-block;
+    position: relative;
+    margin: 0px;
+    font-size: 0.7rem;
+    color: #bec5cb;
+    max-width: 50%;
+    text-align: center;
+    overflow-x: hidden;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+}
+
+.file-zone .img-result i{
+    font-size: 1.1rem;
+    color: #bec5cb;
+    text-align: center;
+    margin-top: 13px;
+    vertical-align: text-bottom;
+}
+
+.file-import .file-drop-zone {
+    height: 70px;
+}
+
+.file-import .file-zone label {
+    top: -18px;
+}
+
+.file-import .file-zone .img-result {
+    top: -84px;
+}
+
+.file-import .file-zone .img-result p {
+    max-width: 90%;
+}
+
+.foto-producto{
+
+}
+
+.foto-producto .file-drop-zone {
+    height: 92px !important;
+}
+
+.foto-producto .file-zone label {    
+    padding-top: 25px;
+}
+
+.foto-producto .file-zone .img-result {
+    top: -118px;
+}
+
+.foto-producto .file-zone .img-result img {
+   height: 90%;
+   /*margin: 0px;*/ 
+}
+
+.foto-producto .file-zone .img-result p{
+   display: none;
+}
+
+@media(max-width:760px){
+    .foto-producto .file-zone label {
+        padding-top: 35px;
+    }
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.cuotaImporte:hover{
+    color: #0299ff !important;
+}
+
+.form-box-dato {
+    text-align: left;
+}
+
+.form-box-dato p{
+    margin-bottom: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.form-box-dato .title p{
+    color: #4eb551;
+    font-size: 0.7rem;
+}
+
+.form-box-dato .valor p{
+    color: #4e4e4e;
+    font-size: 0.9rem;
+}
+
+.archivo:hover{
+    background: #f3f3f3;
+}
+
+.archivo {
+    text-align: left;
+    padding: 5px;
+}
+
+.archivo a{
+    display: inline-block;
+}
+.archivo span{
+    display: inline-block;
+    vertical-align: super;
+    font-size: 0.8rem;
+}
+
+.archivoDelete{
+    margin: auto;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 1.1rem;
+    float: right;
+}
+
+/**IMportaciones xml box*/
+.box-import {
+    margin-top: 20px;
+    min-height: 300px;
+}
+
+.box-import-show {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.box-import-element {
+    display: inline-block;
+    padding: 0px 15px 0px 15px;
+    margin: 5px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px 1px #c5c5c5;
+    width: 129px;
+    height: 150px;
+}
+
+.bie-head {
+    text-align: right;
+    padding-top: 10px;
+}
+
+.bie-head i{
+    text-align: right;
+    color: #ff305c;
+}
+
+.bie-content {
+    text-align: center;
+}
+
+.bie-content .icono{
+    font-size: 2rem;
+}
+
+.bie-content .icono i{
+
+}
+
+.bie-content .icono .pendiente{
+    color: #d4d4d4;
+}
+
+.bie-content .icono .enviado{
+    color: #007bff;    
+    animation: spin 2s linear infinite;
+    margin-top: 32px;
+}
+
+.bie-content .icono .procesado{
+    color: #4dcc74;
+}
+
+.bie-content .icono .cancelar{
+    color: #ff305c;
+}
+
+.bie-content .text{
+    /*margin-top: 15px;*/
+}
+
+.bie-content .text .title{
+    font-size: 0.7rem;
+    text-overflow: ellipsis;
+    overflow: hidden;    
+    max-height: 15px;
+    margin-bottom: 5px !important;
+}
+.bie-content .text .title-file{
+    margin-top: 15px;
+}
+
+.bie-content .text .subtitle{
+    font-size: 0.6rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0px;
+    max-height: 80px;
+    position: relative;
+    display: block;
+    overflow: auto;
+    font-weight: normal !important;
+}
+
+.bie-content .text .nota{
+    font-size: 0.5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+}
+
+.mat-row:hover{
+    background: #f2f2f2;
 }

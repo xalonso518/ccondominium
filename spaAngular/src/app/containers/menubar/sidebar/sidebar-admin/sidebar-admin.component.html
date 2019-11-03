@@ -72,7 +72,7 @@
                 <i class="material-icons back" (click)="close(1)">arrow_back</i>
             </span>
             <ul>
-                <li routerLinkActive="menuSecActive" [routerLink]="['./','cuotas']">    
+                <li routerLinkActive="menuSecActive" [routerLink]="['./','cuotas','lista']">    
                     <i class="fas fa-caret-right submenu-icon"></i><a>Consulta</a>    
                 </li>    
                 <li routerLinkActive="menuSecActive" [routerLink]="['./','cuotas','faltantes']">    
@@ -98,7 +98,7 @@
                 <i class="material-icons back" (click)="close(2)">arrow_back</i>
             </span>
             <ul>
-                <li routerLinkActive="menuSecActive" [routerLink]="['./','gastos']">    
+                <li routerLinkActive="menuSecActive" [routerLink]="['./','gastos','lista']">    
                 <i class="fas fa-caret-right submenu-icon"></i><a>Consulta</a>    
                 </li> 
                 <li routerLinkActive="menuSecActive" [routerLink]="['./','gastos','catalogo']">    
@@ -114,10 +114,10 @@
                 <i class="material-icons back" (click)="close(3)">arrow_back</i>
             </span>
             <ul>
-                <li routerLinkActive="menuSecActive" [routerLink]="['./','cumplimiento']">    
+                <li routerLinkActive="menuSecActive" [routerLink]="['./','cumplimiento', 'lista']">    
                 <i class="fas fa-caret-right submenu-icon"></i><a>Consulta</a>    
                 </li> 
-                <li routerLinkActive="menuSecActive" [routerLink]="['./','cumplimiento','normas']">    
+                <li routerLinkActive="menuSecActive" [routerLink]="['./','cumplimiento','catalogo']">    
                     <i class="fas fa-caret-right submenu-icon"></i><a>Normas</a>    
                 </li>   
             </ul>    
@@ -130,26 +130,29 @@
                 <i class="material-icons back" (click)="close(4)">arrow_back</i>
             </span>
             <ul>
-                <li routerLinkActive="menuSecActive" [routerLink]="['./','configuracion']">    
+                <li routerLinkActive="menuSecActive" [routerLink]="['./','condominio','configuracion']">    
                 <i class="fas fa-caret-right submenu-icon"></i><a>Configuración</a>    
                 </li> 
-                <li routerLinkActive="menuSecActive" [routerLink]="['./','mensajes']">    
+                <li routerLinkActive="menuSecActive" [routerLink]="['./','condominio','mensajes']">    
                     <i class="fas fa-caret-right submenu-icon"></i><a>Mensajes</a>    
                 </li>   
-                <li routerLinkActive="menuSecActive" [routerLink]="['./','avisos']">    
+                <li routerLinkActive="menuSecActive" [routerLink]="['./','condominio','avisos']">    
                     <i class="fas fa-caret-right submenu-icon"></i><a>Avisos</a>    
                 </li> 
-                <li routerLinkActive="menuSecActive" [routerLink]="['./','cuenta']">    
+                <li routerLinkActive="menuSecActive" [routerLink]="['./','condominio','cuenta']">    
                     <i class="fas fa-caret-right submenu-icon"></i><a>Estados de cuenta</a>    
                 </li> 
-                <li routerLinkActive="menuSecActive" [routerLink]="['./','minutas']">    
+                <li routerLinkActive="menuSecActive" [routerLink]="['./','condominio','minutas']">    
                     <i class="fas fa-caret-right submenu-icon"></i><a>Minutas</a>    
                 </li> 
-                <li routerLinkActive="menuSecActive" [routerLink]="['./','galeria']">    
+                <li routerLinkActive="menuSecActive" [routerLink]="['./','condominio','galeria']">    
                     <i class="fas fa-caret-right submenu-icon"></i><a>Galeria</a>    
                 </li> 
-                <li routerLinkActive="menuSecActive" [routerLink]="['./','reglamento']">    
+                <li routerLinkActive="menuSecActive" [routerLink]="['./','condominio','reglamento']">    
                     <i class="fas fa-caret-right submenu-icon"></i><a>Reglamento</a>    
+                </li> 
+                <li routerLinkActive="menuSecActive" [routerLink]="['./','condominio','bitacora']">    
+                    <i class="fas fa-caret-right submenu-icon"></i><a>Bitacora</a>    
                 </li> 
             </ul>    
         </div>

@@ -24,6 +24,12 @@ export class UsuarioService {
     return this.apiClient.apiGetParam<UsuarioView[]>(ConstantsRoutes.USUARIOS_GET, params);
   }
 
+  getUsuariosCasa(casa: string): Observable<ApiResponse<UsuarioView[]>> {
+    let params = new HttpParams();
+    params = params.set('casa', casa);
+    return this.apiClient.apiGetParam<UsuarioView[]>(ConstantsRoutes.USUARIOS_CASA_GET, params);
+  }
+
   getUsuario(id: string): Observable<ApiResponse<UsuarioAgregar>> {
     return this.apiClient.apiGet<UsuarioAgregar>(ConstantsRoutes.USUARIO_GET + `/${id}`);
   }

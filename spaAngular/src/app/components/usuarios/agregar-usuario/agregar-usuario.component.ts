@@ -60,7 +60,7 @@ export class AgregarUsuarioComponent implements OnInit {
     this.usuarioService.getUsuario(id)
         .subscribe(
         res => {
-            this.loadingService.show();
+            this.loadingService.hide();
             // tslint:disable-next-line: max-line-length
             if (res.success) { this.usuario = res.payload; } else { this.toastr.error('No se obtuvieron datos del usuario', 'Error'); }
             }, error => {

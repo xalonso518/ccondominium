@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 var VerifyToken = require('../includes/verifyToken');
-const configCtrl = require('../controllers/config.controller');
+const configuracionCtrl = require('../controllers/configuracion.controller');
 
-router.post('/', VerifyToken, configCtrl.getConfig);
+router.post('/', VerifyToken, configuracionCtrl.getConfiguracion);
 
 module.exports = router;

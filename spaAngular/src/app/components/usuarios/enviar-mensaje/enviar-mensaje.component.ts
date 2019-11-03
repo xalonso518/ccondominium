@@ -34,12 +34,12 @@ export class EnviarMensajeComponent implements OnInit {
     private errorValidationService: ErrorValidationService,
     public dialog: MatDialog,
     public dialogRef: MatDialogRef<EnviarMensajeComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: { usuario: UsuarioView}) { }
+    @Inject(MAT_DIALOG_DATA) public data: { usuario: string}) { }
 
   ngOnInit() {
     if (this.data == null) { this.onNoClick(); } else {
-      this.usuario = this.data.usuario.user;
-      this.mensaje.user = this.data.usuario.user;
+      this.usuario = this.data.usuario;
+      this.mensaje.user = this.data.usuario;
       this.mensaje.admin = this.identityUserService.getUserUser();
       this.mensaje.correo = false;
       this.mensaje.mensaje = '';

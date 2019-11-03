@@ -19,6 +19,19 @@ usuarioCtrl.getUsuarios = async(req, res) => {
     }
 }
 
+usuarioCtrl.getUsuariosCasa = async(req, res) => {
+	try{
+        let casa = req.query.casa;
+        var fUsuarios = {};
+        fUsuarios = await Usuario.find({ "casa": casa, "estado": "1" },{ pass: 0, __v: 0 });
+        if (!fUsuarios) return res.status(404).send('Usuarios no encontrados.');
+        res.status(200).send({ success: true, payload: fUsuarios });
+    }
+    catch(e){
+        res.status(404).send("Problemas de conexion");
+    }
+}
+
 usuarioCtrl.getUsuario = async (req, res) => {
 	try{
         const fUsuarios = await Usuario.findById(req.params.id,{ pass: 0, __v: 0 });
@@ -144,7 +157,7 @@ usuarioCtrl.enviarInvitacion = async (req, res) => {
         var fConfig = await Config.findOne({main: true});
         if (!fConfig) return res.status(404).send('Error al enviar el correo. (Sin config)');
     
-        var rMail = await sendGrid.sendMailBienvenida(user, fConfig.nombre, fConfig.link);    
+        var rMail = await sendGrid.sendMailBienvenida(user, fConfig.nombre, fConfig.link);
         if (rMail) res.status(200).send({ success: true, payload: 'OK' });
         else res.status(404).send("Error al enviar el correo");
     }
